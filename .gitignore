@@ -1,0 +1,12 @@
+# Jetbrains stuff
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Pythong stuff
+__pycache__/
+
+# Datasets stuff
+datasets/*/*
+!.keep
