@@ -1,0 +1,36 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  datasets.download.mnist:
+    dir: datasets/MNIST
+    status:
+      - test -f train-images-idx3-ubyte.gz
+      - test -f train-labels-idx1-ubyte.gz
+      - test -f t10k-images-idx3-ubyte.gz
+      - test -f t10k-labels-idx1-ubyte.gz
+    cmds:
+      - curl -O https://raw.githubusercontent.com/fgnt/mnist/master/train-images-idx3-ubyte.gz
+      - curl -O https://raw.githubusercontent.com/fgnt/mnist/master/train-labels-idx1-ubyte.gz
+      - curl -O https://raw.githubusercontent.com/fgnt/mnist/master/t10k-images-idx3-ubyte.gz
+      - curl -O https://raw.githubusercontent.com/fgnt/mnist/master/t10k-labels-idx1-ubyte.gz
+
+  datasets.download.emnist:
+    # TODO Finish setp to unzip this and `status` to avoid re-download
+    dir: datasets/EMNIST
+    cmds:
+      - curl -O https://biometrics.nist.gov/cs_links/EMNIST/gzip.zip
+      - curl -O https://biometrics.nist.gov/cs_links/EMNIST/Readme.txt
+      - curl -O https://biometrics.nist.gov/cs_links/EMNIST/matlab.zip
+
+  datasets.download:
+    deps:
+      - datasets.download.mnist
+      - datasets.download.emnist
+
+  init:
+    deps:
+      - datasets.download
+    cmds:
+      - poetry install
