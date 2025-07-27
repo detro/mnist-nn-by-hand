@@ -33,6 +33,8 @@ Now you can use the `task`: tap `TAB` twice to get a list of available commands.
 
 ## Usage
 
+### `render_example`
+
 ```shell
 # Render a random example digit from MNIST
 $ task render_example
@@ -41,6 +43,47 @@ $ task render_example -- --id 1234
 # Help
 $ task render_example -- --help
 ```
+
+<details>
+<summary>Output for training image `12345`</summary>
+  
+```shell
+$ task render_example -- --id 12345
+* Data Set: mnist (training) (size: 60000)
+* Image ID: 12345
+* Image Label: 3
+┌────────────────────────────┐
+│                            │
+│                            │
+│                            │
+│                            │
+│                            │
+│              ▒█████▒       │
+│           ░▓████████       │
+│         ░▓██████████▒      │
+│         ▓██████▓▓████      │
+│        ░██████▓  ░▓██░     │
+│        ░█████▓    ▒██░     │
+│         ▒██▒      ▒██      │
+│                  ░███      │
+│                 ▒███▓      │
+│              ░▒████▒       │
+│             ░█████░        │
+│             ▓████▒         │
+│              ████▓         │
+│       ▒       ▒███░        │
+│     ░██       ░███         │
+│     ▒█▓      ░███▓         │
+│     ▓█░    ░▒████░         │
+│     ███▓▓▓▓████▓▒          │
+│     ▒█████████▒            │
+│     ░▓██████▓              │
+│                            │
+│                            │
+│                            │
+└────────────────────────────┘
+```
+</details>
 
 ## Datasets
 
