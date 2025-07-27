@@ -52,7 +52,7 @@ $ task dataset.download
 
 ### Citations
 
-*  Yann LeCun, Courant Institute, NYU Corinna Cortes, Google Labs, New York Christopher J.C. Burges, Microsoft Research, Redmond.
+* Yann LeCun, Courant Institute, NYU Corinna Cortes, Google Labs, New York Christopher J.C. Burges, Microsoft Research, Redmond.
   MNIST: The MNIST Dataset of handwritten digits
   * Retrieved from: https://github.com/fgnt/mnist (because official website seems empty now)
   * Official website: http://yann.lecun.com/
