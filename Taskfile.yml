@@ -34,3 +34,8 @@ tasks:
       - datasets.download
     cmds:
       - poetry install
+
+  render_example:
+    cmds:
+      - poetry run python render_example.py {{.CLI_ARGS}}
+    silent: true
