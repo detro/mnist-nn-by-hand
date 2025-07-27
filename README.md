@@ -23,8 +23,10 @@ If `asdf` is already installed in your system, please do the following:
 $ asdf plugin add task
 $ asdf plugin add python
 $ asdf plugin add poetry
+
 # Install tools via `asdf`
 $ asdf install
+
 # Initialize codebase
 $ task init
 ```
@@ -38,8 +40,10 @@ Now you can use the `task`: tap `TAB` twice to get a list of available commands.
 ```shell
 # Render a random example digit from MNIST
 $ task render_example
+
 # Render a specific example digit from MNIST
 $ task render_example -- --id 1234
+
 # Help
 $ task render_example -- --help
 ```
@@ -49,6 +53,7 @@ $ task render_example -- --help
   
 ```shell
 $ task render_example -- --id 12345
+
 * Data Set: mnist (training) (size: 60000)
 * Image ID: 12345
 * Image Label: 3
